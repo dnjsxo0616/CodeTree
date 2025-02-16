@@ -14,9 +14,9 @@ public class Main {
     }
 
     public static void plus(int a, int b, int c){
-        if(a < b || a<c) {
+        if(a < b && a<c) {
             System.out.print(a);
-        } else if ( b < a || b<c) {
+        } else if ( b < a && b<c) {
             System.out.print(b);
         } else{
             System.out.print(c);
