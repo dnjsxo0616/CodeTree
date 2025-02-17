@@ -11,9 +11,7 @@ public class Main {
 
         int cont = 0;
         for(int i=num1; i<=num2; i++) {
-            int n1 = i/10;
-            int n2 = i%10;
-            if(magicNum(n1) || magicNum(n2)|| checkNum(i)) {
+            if(magicNum(i) || checkNum(i)) {
                 cont++;
             }
         }
@@ -21,8 +19,9 @@ public class Main {
     }
 
     public static boolean magicNum(int n) {
-        List<Integer> numbers = Arrays.asList(3, 6, 9);
-        return numbers.contains(n);
+        return Arrays.stream(String.valueOf(n).split(""))
+        .mapToInt(Integer::parseInt)
+        .anyMatch(d -> d == 3 || d == 6 || d==9);
     }
 
     public static boolean checkNum(int n){
