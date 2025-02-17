@@ -19,9 +19,9 @@ public class Main {
     }
 
     public static boolean magicNum(int n) {
-        return Arrays.stream(String.valueOf(n).split(""))
-        .mapToInt(Integer::parseInt)
-        .anyMatch(d -> d == 3 || d == 6 || d==9);
+        String numStr = String.valueOf(n);
+        return numStr.indexOf('3') != -1 || numStr.indexOf('6') != -1 || numStr.indexOf('9') != -1;
+         
     }
 
     public static boolean checkNum(int n){
