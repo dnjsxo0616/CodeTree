@@ -11,7 +11,7 @@ public class Main {
 
         int ans= 0;
         for(int i=a; i<=b; i++) {
-            if(calculation(i) && i==1){
+            if(calculation(i) || i==1){
                 continue;
             }
             ans+=i;
